@@ -1,2 +1,4 @@
 #pragma once
-void test_prim();
+
+void testeCheltuieli();
+void testeRepo();
