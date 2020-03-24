@@ -7,7 +7,9 @@ Cheltuieli::Cheltuieli() {
 	this->tip = NULL;
 }
 
-Cheltuieli::~Cheltuieli() {
+Cheltuieli ::~Cheltuieli()
+{
+
 }
 
 Cheltuieli::Cheltuieli(int zi, int suma, char* tip) {
@@ -46,5 +48,21 @@ char* Cheltuieli::getTip() {
 	return this->tip;
 }
 
+Cheltuieli& Cheltuieli::operator=(const Cheltuieli& c)
+{
+	this->setZi(c.zi);
+	this->setSuma(c.suma);
+	this->setTip(c.tip);
+	return *this;
+}
 
+bool Cheltuieli:: operator==(const Cheltuieli& c)
+{
+	return strcmp(this->tip, c.tip) == 0 && this->suma == c.suma && this->zi == c.zi;
+}
 
+ostream& operator<<(ostream& os, const Cheltuieli& c)
+{
+	os << c.zi << " " << c.suma << " " << c.tip;
+	return os;
+}

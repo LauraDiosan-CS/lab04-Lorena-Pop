@@ -18,6 +18,8 @@ public:
 	Repo();
 	~Repo();
 	void addElem(Cheltuieli c);
+	void deleteElem(int zi, int suma, char* tip);
+	void updateElem(int i, int zi, int suma, char* tip);
 	Cheltuieli* getAll();
 	int getSize();
 };

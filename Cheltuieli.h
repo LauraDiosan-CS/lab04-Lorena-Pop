@@ -23,9 +23,10 @@ public:
 	void setZi(int zi);
 	void setSuma(int suma);
 	void setTip(char* tip);
-	//Cheltuieli& operator=(const Cheltuieli& c);
-	//char* toString();
-	//bool compare(Cheltuieli& c);
+	Cheltuieli& operator=(const Cheltuieli&);
+	bool operator==(const Cheltuieli &);
+	friend ostream& operator<<(ostream& os, const Cheltuieli& c);
+
 };
 
 #endif

@@ -2,6 +2,8 @@
 #include "Cheltuieli.h"
 #include "Repo.h"
 #include <assert.h>
+#include <cassert>
+#include "Operatii.h"
 using namespace std;
 
 void testeCheltuieli() {
@@ -18,11 +20,25 @@ void testeCheltuieli() {
 void testeRepo() {
 	char* tip1 = new char[10];
 	char* tip2 = new char[10];
-	Cheltuieli c1(5, 5, tip1);
+	Cheltuieli c1(5, 500, tip1);
 	Cheltuieli c2(6, 30, tip2);
 	Repo r;
+
 	r.addElem(c1);
 	assert(r.getAll()[0].getZi() == 5);
-	//assert(r.getSize() == 4);
+}
 
+void testeOperatii()
+{
+	char* tip1 = new char[10];
+	char* tip2 = new char[10];
+
+	Operatii op;
+
+	op.AddElemOp(6,400,tip2);
+	assert(op.getAll()[0].getZi() == 6);
+	op.updateElemOp(1, 8, 200,tip2);
+	assert(op.getAll()[0].getZi() == 8);
+
+	cout << "Testare cu succes!" << endl;
 }

@@ -6,6 +6,7 @@ int main() {
 
 	testeCheltuieli();
 	testeRepo();
-	cout << "Testare cu succes!" << endl;
+	testeOperatii();
+	
 	return 0;
 }
